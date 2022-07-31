@@ -1,38 +1,180 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+h1,p {
+  margin: 0;
+}
+
+.main, .App, .header, .form-pagination, .form-container {
+  display: flex;
+}
+
+.form-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.forgot-password {
+  display: block;
+}
+
 .App {
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  box-shadow: 0 10px 15px -15px black;
+  padding: 0.7rem 0;
+}
+
+.header {
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 22px;
+  margin: 0;
+  color: rgb(41, 41, 78);
+}
+
+.header > .title > span {
+  color: rgb(215, 145, 15);
+}
+
+.trial-btn, .login-btn {
+  border-radius: 5px;
+  width: 190px;
+  min-height: 50px;
+}
+
+.trial-btn, .trial-btn:focus, .trial-btn:hover {
+  background-color: rgb(41, 41, 78);
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.login-btn, .login-btn:focus, .login-btn:hover {
+  background-color: rgb(215, 145, 15);
+  color: white;
+  border: none;
+  margin-left: 0.7rem;
+}
+
+.ant-space {
+  display: block;
+  margin-top: 2.2rem;
+}
+
+.form-container {
+  width: 40%;
+}
+
+.form-container > div {
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-container {
+  width: 60%;
+  background-color: rgb(41, 41, 78);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main, .img-container {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.form-pagination {
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.ant-space,
+.form-btn {
+  margin-bottom: 1.2rem;
+}
+
+.ant-space-item + .ant-space-item {
+  margin-top: 1.2rem;
+}
+
+.form-header {
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.form-container > div > p {
+  color: rgb(163, 163, 163);
+}
+
+.ant-input, .form-btn {
+  min-height: 3rem;
+  border-radius: 4px;
+}
+
+.form-btn, .form-btn:focus, .form-btn:hover {
+  background-color: rgb(41, 41, 78);
   color: white;
+  font-weight: 600;
+  letter-spacing: 1.2px;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-checkbox-wrapper > span,
+.forgot-password {
+  font-size: 12px;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.forgot-password, 
+.forgot-password:hover, 
+.forgot-password:active, 
+.forgot-password:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media(max-width: 767.9px){
+  .trial-btn, 
+  .login-btn,
+  .img-container {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form-container {
+    width: 100%;
   }
+
+  .form-container > div {
+    width: 90%;
+    max-width: 363px;
+  }
+}
+
+@media (max-width: 991.9px){
+  .img-container {
+    display: none;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .form-container > div {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1078px){
+  .forgot-password,
+  .ant-checkbox-wrapper > span {
+    font-size: 10px;
+  } 
 }
